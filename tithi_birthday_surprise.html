@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f9dce8">
+<title>For Tithi 💗 A Birthday Surprise</title>
+<style>
+:root{--pink:#f6b8cf;--rose:#d978a2;--lav:#d9c9f4;--cream:#fff9f5;--ink:#74536c;--gold:#d8ad63}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,serif;background:radial-gradient(circle at 12% 10%,#fff 0 4%,transparent 24%),linear-gradient(135deg,#ffeaf1,#f4eaff 55%,#fff2e7);overflow-x:hidden}
+button{font:inherit}.wrap{width:min(94%,760px);margin:22px auto 48px}.hero,.panel{background:#ffffffc9;border:1px solid #fff;box-shadow:0 14px 45px #b887a333;border-radius:28px;padding:clamp(20px,5vw,38px);text-align:center;backdrop-filter:blur(8px)}
+.hero{position:relative;overflow:hidden}.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#bd7c9c}
+h1{font-size:clamp(38px,9vw,68px);line-height:1.04;margin:12px 0;color:#c66f98;text-shadow:2px 3px 0 #fff}
+h2{color:#bd7095;margin:0 0 12px;font-size:clamp(25px,6vw,34px)}p{line-height:1.75;font-size:16px}
+.sub{max-width:520px;margin:0 auto;color:#896d83}
+.heart{color:#e88eb2}.sparkle{font-size:24px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0}
+.nav button,.action{border:1px solid #efc5d8;background:#fff8fc;color:#a95e83;padding:11px 15px;border-radius:30px;cursor:pointer;box-shadow:0 4px 12px #dca6bd33}
+.nav button.active,.action.primary{background:linear-gradient(135deg,#f6bfd4,#e4d4fb);color:#704b69;border-color:#fff}
+.panel{display:none;margin-top:14px;animation:rise .45s ease}.panel.active{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.gift-area{height:225px;display:grid;place-items:center;cursor:pointer;border:0;background:none;width:100%}
+.gift{width:175px;height:125px;position:relative;filter:drop-shadow(0 14px 12px #bd7a9a55)}
+.giftbase{position:absolute;bottom:0;left:0;width:175px;height:95px;border-radius:8px 8px 15px 15px;background:linear-gradient(90deg,#e88fb3,#f9c7d9,#df82a9);border:3px solid #fff1f6}
+.giftlid{position:absolute;top:20px;left:-9px;width:193px;height:34px;border-radius:8px;background:linear-gradient(90deg,#d979a0,#ffc6dc,#d979a0);border:3px solid #fff1f6;z-index:2;transition:all .8s}
+.ribbon{position:absolute;z-index:3;left:70px;top:20px;width:35px;height:105px;background:linear-gradient(90deg,#fff0b8,#fff9db,#e8c36f)}
+.bow{position:absolute;z-index:4;top:0;left:61px;width:55px;height:28px;border:8px solid #e9c16e;border-radius:50%;transform:rotate(-20deg)}
+.bow:after{content:"";position:absolute;left:18px;top:-8px;width:40px;height:25px;border:8px solid #e9c16e;border-radius:50%;transform:rotate(45deg)}
+.open .giftlid{transform:translate(12px,-83px) rotate(16deg)}
+.open .bow{transform:translate(12px,-83px) rotate(16deg);transition:all .8s}
+.hint{font:12px Arial,sans-serif;letter-spacing:2px;color:#b77b9b}
+.hidden{display:none!important}
+.letter{background:linear-gradient(145deg,#fffafc,#fff0f5);border:1px dashed #e8a9c4;border-radius:18px;padding:22px;text-align:left;max-width:530px;margin:16px auto}
+.book{max-width:480px;margin:14px auto;padding:18px;background:#fff6fb;border-radius:18px;border:1px solid #f4d7e4;min-height:150px}
+.book .page{font-size:14px;color:#b37b99;letter-spacing:2px}
+.photo{font-size:56px;margin:10px}
+.cake{font-size:115px;cursor:pointer;filter:drop-shadow(0 9px 10px #d99ab566);border:0;background:none}
+.award{max-width:520px;margin:15px auto;padding:25px 15px;border:5px double #dfb86d;border-radius:18px;background:linear-gradient(135deg,#fffdf3,#fff0f6)}
+.award h3{font-size:27px;color:#b47a45;margin:10px}
+.award .seal{font-size:48px}
+.small{font:12px Arial,sans-serif;color:#a9869c}
+footer{text-align:center;padding:20px;font:12px Arial,sans-serif;color:#a7839b}
+.confetti{position:fixed;z-index:9;top:-20px;width:9px;height:13px;animation:fall 3.5s linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(780deg);opacity:.2}}
+.float{position:absolute;opacity:.45;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-13px) rotate(8deg)}}
+@media(max-width:430px){.nav button{font-size:12px;padding:9px 11px}.hero,.panel{border-radius:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <span class="float" style="left:8%;top:15%;font-size:25px">♡</span><span class="float" style="right:9%;top:18%;font-size:30px">✦</span>
+  <div class="eyebrow">A little world made just for you</div>
+  <div class="sparkle">🦋 ✨ 💗 ✨ 🦋</div>
+  <h1>Happy Birthday,<br>Tithi!</h1>
+  <p class="sub">A tiny pastel universe, filled with hugs in words, sweet memories, and a few surprises. Made especially for my Bestie. 💕</p>
+  <div class="nav" aria-label="Birthday surprises">
+    <button class="active" data-tab="giftPanel">🎁 Gift</button>
+    <button data-tab="memoryPanel">📖 Memories</button>
+    <button data-tab="letterPanel">💌 Letter</button>
+    <button data-tab="cakePanel">🎂 Cake</button>
+    <button data-tab="awardPanel">🏆 Award</button>
+  </div>
+</header>
+
+<section class="panel active" id="giftPanel">
+  <div class="eyebrow">Surprise number one</div><h2>Your Mystery Gift</h2>
+  <p>Something sweet is waiting inside. Tap the gift box to unwrap it!</p>
+  <button class="gift-area" id="giftButton" aria-label="Open mystery gift">
+    <div class="gift" id="gift">
+      <div class="giftlid"></div><div class="giftbase"></div><div class="ribbon"></div><div class="bow"></div>
+    </div>
+  </button>
+  <div class="hint" id="giftHint">✧ TAP THE GIFT ✧</div>
+  <div id="giftReveal" class="hidden"><h2>Surprise, Tithi! 💝</h2><p>You deserve all the lovely things this world has to offer. Sending you a sky full of stars and a heart full of wishes!</p></div>
+</section>
+
+<section class="panel" id="memoryPanel">
+  <div class="eyebrow">Surprise number two</div><h2>Our Little Memory Book</h2>
+  <p>A few pages for the smiles, silly moments, and friendship that make life brighter.</p>
+  <div class="book">
+    <div class="page" id="pageNo">PAGE 1 OF 4</div>
+    <div class="photo" id="memoryEmoji">🌷</div>
+    <h2 id="memoryTitle">The happy little moments</h2>
+    <p id="memoryText">Some moments may seem small, but they become the sweetest memories.</p>
+    <button class="action" id="prevPage">← Back</button>
+    <button class="action primary" id="nextPage">Next memory →</button>
+  </div>
+  <p class="small">Tip: You can replace these sample memories with your own stories and photos before sharing.</p>
+</section>
+
+<section class="panel" id="letterPanel">
+  <div class="eyebrow">Surprise number three</div><h2>A Secret Letter for You</h2>
+  <p>Tap the envelope to reveal a little message.</p>
+  <button class="action primary" id="letterButton">💌 Open your letter</button>
+  <div id="letter" class="letter hidden">
+    <div style="text-align:center;font-size:28px">💕</div>
+    <p>Dear Tithi,</p>
+    <p>Happy Birthday to an amazing bestie! I hope this new chapter brings you peaceful days, exciting adventures, genuine smiles, and countless reasons to feel proud of yourself.</p>
+    <p>Thank you for being you. May your dreams grow bigger and your happiness grow brighter every day.</p>
+    <p style="text-align:right">With lots of love and best wishes,<br><b>Your Bestie 💗</b></p>
+  </div>
+</section>
+
+<section class="panel" id="cakePanel">
+  <div class="eyebrow">Surprise number four</div><h2>Make a Birthday Wish!</h2>
+  <p>Tap the cake to light up the celebration. ✨</p>
+  <button class="cake" id="cakeButton" aria-label="Celebrate birthday cake">🎂</button>
+  <div id="cakeMessage"><p class="hint">TAP THE CAKE TO CELEBRATE</p></div>
+</section>
+
+<section class="panel" id="awardPanel">
+  <div class="eyebrow">Surprise number five</div><h2>One Very Special Award</h2>
+  <div class="award">
+    <div class="seal">🏆</div>
+    <div class="eyebrow">Official Bestie Recognition</div>
+    <h3>BESTIE OF THE YEAR</h3>
+    <p>This award is proudly presented to</p>
+    <h2>TITHI 💗</h2>
+    <p>For being wonderfully unique, bringing extra sunshine, and making friendship feel like a beautiful gift.</p>
+    <div style="font-size:25px;color:#c28e49">✦ ✧ ✦</div>
+    <p><b>Certified with friendship & affection</b></p>
+  </div>
+  <button class="action primary" onclick="celebrate()">Celebrate Tithi! 🎉</button>
+</section>
+<footer>Made with friendship, pastel dreams & lots of love 💗</footer>
+</div>
+<script>
+const tabs=[...document.querySelectorAll('.nav button')],panels=[...document.querySelectorAll('.panel')];
+tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.classList.toggle('active',x===b));panels.forEach(p=>p.classList.toggle('active',p.id===b.dataset.tab))}));
+function celebrate(){const colors=['#f6b8cf','#d9c9f4','#ffe2a8','#ffffff','#b8e5d5'];for(let i=0;i<90;i++){const e=document.createElement('i');e.className='confetti';e.style.left=Math.random()*100+'vw';e.style.background=colors[i%colors.length];e.style.animationDelay=Math.random()*.8+'s';e.style.borderRadius=Math.random()>.5?'50%':'2px';document.body.appendChild(e);setTimeout(()=>e.remove(),4200)}}
+document.getElementById('giftButton').addEventListener('click',()=>{document.getElementById('gift').classList.add('open');document.getElementById('giftHint').classList.add('hidden');document.getElementById('giftReveal').classList.remove('hidden');celebrate()});
+const memories=[
+ ['🌷','The happy little moments','Some moments may seem small, but they become the sweetest memories.'],
+ ['🦋','The laughter we share','May there always be new reasons to laugh until your cheeks hurt.'],
+ ['🌈','Bright days ahead','Here is to new adventures, kind people, and beautiful surprises waiting for you.'],
+ ['💗','A friendship wish','No matter how busy life gets, I hope you always find time for joy and your favourite dreams.']
+];let page=0;
+function showPage(){document.getElementById('pageNo').textContent=`PAGE ${page+1} OF ${memories.length}`;document.getElementById('memoryEmoji').textContent=memories[page][0];document.getElementById('memoryTitle').textContent=memories[page][1];document.getElementById('memoryText').textContent=memories[page][2];}
+document.getElementById('nextPage').onclick=()=>{page=(page+1)%memories.length;showPage()};document.getElementById('prevPage').onclick=()=>{page=(page+memories.length-1)%memories.length;showPage()};
+document.getElementById('letterButton').onclick=()=>{document.getElementById('letter').classList.toggle('hidden');document.getElementById('letterButton').textContent=document.getElementById('letter').classList.contains('hidden')?'💌 Open your letter':'💌 Close your letter';celebrate()};
+document.getElementById('cakeButton').onclick=()=>{document.getElementById('cakeMessage').innerHTML='<h2>Make a wish, Tithi! 🌟</h2><p>May this year sparkle with happiness, love, and wonderful new beginnings. 💖</p>';celebrate()};
+</script>
+</body>
+</html>
